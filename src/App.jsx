@@ -1,43 +1,39 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 
 function App() {
+
   const [count, setCount] = useState(0)
 
+  function decrementCount() {
+    setCount(count - 1)
+  }
+
+  function incrementCount() {
+    setCount(count + 1)
+  }
+
+  function multiplyCount() {
+    setCount(count * 2)
+  }
+
+  function divisionCount() {
+    setCount(count / 2)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className="title">
+      <h1>Simple Counter Application</h1>
+    <div className= "counter">
+      <button onClick={divisionCount}>:</button>
+      <br />
+    <button onClick={decrementCount}>-</button>
+    <span>{count}</span>
+    <button onClick={incrementCount}>+</button>
+    <br />
+    <button onClick={multiplyCount}>x</button>
+    </div>
     </div>
   )
 }
