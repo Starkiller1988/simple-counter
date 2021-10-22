@@ -26,13 +26,13 @@ function App() {
     <div className="title">
       <h1>Simple Counter Application</h1>
     <div className= "counter">
-      <button onClick={divisionCount}>:</button>
+      <button onClick={divisionCount}>:2</button>
       <br />
-    <button onClick={decrementCount}>-</button>
+    <button onClick={decrementCount}>-1</button>
     <span>{count}</span>
-    <button onClick={incrementCount}>+</button>
+    <button onClick={incrementCount}>+1</button>
     <br />
-    <button onClick={multiplyCount}>x</button>
+    <button onClick={multiplyCount}>x2</button>
     </div>
     </div>
   )
